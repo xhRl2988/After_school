@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 이벤트</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="item">
+        <img src="images/ahlfmth.webp" alt="이미지1">
+        <button class="over" id="open">상세 설명 보기</button>
+        <div id="desc" class="detail">
+            <h4>뫼르소</h4>
+            <p>
+                모티브는 프랑스의 작가 알베르 카뮈의 소설 이방인의 주인공 뫼르소.
+                림버스 컴퍼니에 입사하기 전에는 N사에 소속되었다고 한다.
+                개인의 판단을 맡기지 않는 명확하고 짧은 지시를 원한다고 설명되며, 그에 걸맞게 소개글도 가장 짧다.
+                마치 로봇처럼 목소리 톤도 다른 이들과 다르게 굉장히 정적이고 높낮이가 적은 편이며, 말도 그만큼 짦고 간결하게 하는 편이다. 이는 합리를 따져서 그런 것인데, 단답으로는 설득이 안 될 경우 한 장면을 세세하게 해석해서 보이는 그대로 읊는다. 타인의 감정이나 행동 원리를 이해하지 못하는 모습을 행동의 의미를 무시하고 행동 그 자체만 읊는 것으로 표현했다는 해석이 있다.
+                가장 특이한 점은 표정이 포스터에 있는 무표정 단 하나이다. 림버스 전 캐릭터 통틀어서 표정 스프라이트가 하나인 캐릭터는 얼굴을 전부 가렸거나 시체이거나 엑스트라인데, 뫼르소는 주연인 수감자에 맨 얼굴에 살아있는 캐릭터여도 계속 저 표정인 것. 이후 5장 중편 마지막 파트에서 딱 한 번 놀라는 표정을 지은 스프라이트가 나왔다. 그래봤자 동공이 옆으로 움직인 것뿐이지만
+                다만 무표정한 거지 무감정한 것이 절대 아니며, 이는 3.5장에서 히스클리프의 요리(?)를 먹고 분노하여 랩을 하듯이 요리와 히스클리프, 이상을 후드려 까고는 짧게 말하면 다들 못 알아듣는다며 자기가 지휘를 맡을 때 답답한 감정을 여지없이 드러낸다. 단테도 이에 놀랐으며 히스클리프와 돈키호테, 이상도 카리스마에 압도당했을 정도. 5장에서는 한때 즐거움을 찾아다니려 했다고 하며, 그 일환으로 클럽에 술도 마시러 다녔다고 한다.
+            </p>
+            <button id="close">상세 설명 닫기</button>
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById('open').addEventListener('click', function() {
+            document.getElementById('desc').style.display = 'block'; 
+            this.style.display = 'none'; 
+        });
+
+        document.getElementById('close').addEventListener('click', function() {
+            document.getElementById('desc').style.display = 'none';
+            document.getElementById('open').style.display = 'block'; 
+        });
+    </script>
+</body>
+</html>

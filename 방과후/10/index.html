@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날짜 구하기</title>
+    <style>
+       #container{
+            margin: 50px auto;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 2px double #222;
+            background-color: #d8f0fc;
+            text-align: center;
+        }
+        h1{
+            margin-top: 80px;
+        }
+        .accent{
+            font-size: 1.8em;
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var i_y;
+        var i_m;
+        var i_d;
+        var o_y;
+        var o_m;
+        var o_d;
+
+        i_y = prompt("독서를 시작한 년도를 입력하세요.(yyyy))");
+        i_m = prompt("독서를 시작한 년도를 입력하세요.(mm))");
+        i_d = prompt("독서를 시작한 년도를 입력하세요.(dd))");
+        
+    </script>
+    <div id="container">
+        <h1>책 읽기</h1>
+        <p><span class="accent" id="result">
+            <script>
+                const currentDate = new Date();
+                const year = currentDate.getFullYear();
+                const month = currentDate.getMonth() + 1;
+                const day = currentDate.getDate();
+
+                o_y = year - i_y
+                o_m = month - i_m
+                o_d = day - i_d
+
+                document.write(o_y+"년"+o_m+"월"+o_d);
+            </script>
+        </span>일 연속으로<br>책 읽기를 달성했군요</p>
+        <p>축하합니다!</p>
+    </div>
+</body>
+</html>
